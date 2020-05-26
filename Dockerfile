@@ -82,8 +82,8 @@ RUN apk --no-cache add wget \
     && apk del wget
 
 # Install SBT
-ENV SCALA_VERSION 2.13.1
-ENV SBT_VERSION 1.3.8
+ENV SCALA_VERSION 2.13.2
+ENV SBT_VERSION 1.3.10
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 WORKDIR /root/project

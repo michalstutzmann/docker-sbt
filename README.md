@@ -5,5 +5,5 @@ A Docker image consisting of JDK, Docker client and SBT.
 ## Publishing
 
 ```shell
-docker build -t mwegrz/docker-sbt:3.1.3 . && docker push mwegrz/docker-sbt:3.1.3
+docker build -t mwegrz/docker-sbt:3.1.4 . && docker push mwegrz/docker-sbt:3.1.4
 ```
