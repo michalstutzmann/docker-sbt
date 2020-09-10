@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:8u242
+FROM azul/zulu-openjdk-alpine:8u262
 
 RUN apk update && apk upgrade
 
@@ -82,8 +82,8 @@ RUN apk --no-cache add wget \
     && apk del wget
 
 # Install SBT
-ENV SCALA_VERSION 2.13.2
-ENV SBT_VERSION 1.3.12
+ENV SCALA_VERSION 2.13.3
+ENV SBT_VERSION 1.3.13
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 WORKDIR /root/project
