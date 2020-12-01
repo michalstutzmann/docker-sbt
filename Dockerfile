@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:8u262
+FROM azul/zulu-openjdk-alpine:8u272
 
 RUN apk update && apk upgrade
 
@@ -18,7 +18,7 @@ RUN apk add --no-cache \
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
 
 ENV DOCKER_CHANNEL stable
-ENV DOCKER_VERSION 19.03.8
+ENV DOCKER_VERSION 19.03.12
 # TODO ENV DOCKER_SHA256
 # https://github.com/docker/docker-ce/blob/5b073ee2cf564edee5adca05eee574142f7627bb/components/packaging/static/hash_files !!
 # (no SHA file artifacts on download.docker.com yet as of 2017-06-07 though)
@@ -82,8 +82,8 @@ RUN apk --no-cache add wget \
     && apk del wget
 
 # Install SBT
-ENV SCALA_VERSION 2.13.3
-ENV SBT_VERSION 1.3.13
+ENV SCALA_VERSION 2.13.4
+ENV SBT_VERSION 1.4.4
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 WORKDIR /root/project
